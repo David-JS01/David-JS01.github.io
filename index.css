@@ -1,44 +1,404 @@
+
 body {
     font-family: Arial, sans-serif;
+    color: white;
     margin: 0;
     padding: 0;
+    background-color: #1d1f25;
 }
 
-header, nav, main, footer {
-    padding: 20px;
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
 
 header {
-    background-color: #333;
+    background-color: #132653;
     color: #fff;
-    text-align: center;
+    padding: 20px 0;
+    position: relative;
 }
 
-nav ul {
+header nav ul {
     list-style-type: none;
     padding: 0;
-    text-align: center;
 }
 
-nav ul li {
+header nav ul li {
     display: inline;
     margin-right: 20px;
 }
 
-nav ul li a {
-    color: #333;
+header nav ul li a {
+    color: #fff;
     text-decoration: none;
 }
 
-nav ul li a:hover {
+header nav ul li a:hover {
     text-decoration: underline;
+}
+
+main {
+    padding: 50px 0;
+}
+
+section {
+    padding: 50px 0;
+}
+
+section h2 {
+    text-align: center;
+}
+
+section h1 {
+    text-align: center;
 }
 
 footer {
     background-color: #333;
     color: #fff;
+    padding: 20px 0;
     text-align: center;
-    position: fixed;
-    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+p {
+    text-align: center;
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#inicio {
+    background-color: #0e3eae6d;
+    border-radius: 5px;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.inicio-section p{
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+
+/**/
+
+.education-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.education-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.education-item {
+    position: relative;
+    background-color: #fff;
+    color: black;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Ancho fijo para todos los elementos */
+    height: 200px; /* Altura fija para todos los elementos */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.education-item-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.education-item:hover .education-item-background {
+    opacity: 0.8;
+}
+
+.item-1 .education-item-background {
+    background-image: url('images/usal.png'); /* Ruta de la imagen de fondo difuminada para el primer item */
+}
+
+.item-2 .education-item-background {
+    background-image: url('images/uem.png'); /* Ruta de la imagen de fondo difuminada para el segundo item */
+}
+
+.education-item:hover {
+    transform: scale(1.05); /* Agrandar al pasar el ratón */
+}
+
+.education-item h3, .education-item p {
+    z-index: 1;
+}
+
+
+/**/
+
+.experience-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.experience-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.experience-item {
+    position: relative;
+    background-color: #fff;
+    color: black;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Ancho fijo para todos los elementos */
+    height: 200px; /* Altura fija para todos los elementos */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.experience-item-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.experience-item:hover .experience-item-background {
+    opacity: 0.8;
+}
+
+.item-1 .experience-item-background {
+    background-image: url('images/NTTData.png'); /* Ruta de la imagen de fondo difuminada para el primer item */
+}
+
+.experience-item:hover {
+    transform: scale(1.05); /* Agrandar al pasar el ratón */
+}
+
+.experience-item h3, .experience-item p {
+    z-index: 1;
+}
+
+/**/
+.titles{
+    font-size: larger;
+    font-style: italic;
+}
+
+/* Estilos para los botones de desplegable */
+
+
+.accordion-btn {
+    background-color: #f9f9f9;
+    color: #333;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    border-radius: 10px;
+    margin: 0.5%;
+}
+
+.accordion-btn:hover {
+    background-color: #ddd;
+}
+
+/* Estilos para el contenido del desplegable */
+.accordion-content {
+    padding: 0 18px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    
+}
+
+.accordion-btn:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+
+  /**/
+
+.certifications-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.certifications-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.certifications-item {
+    position: relative;
+    background-color: #fff;
+    color: black;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Ancho fijo para todos los elementos */
+    height: 200px; /* Altura fija para todos los elementos */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    font-style: normal;
+}
+
+.certifications-item-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.certifications-item:hover .certifications-item-background {
+    opacity: 0.8;
+}
+
+.item-1 .certifications-item-background {
+    background-image: url('images/rndl.png'); /* Ruta de la imagen de fondo difuminada para el primer item */
+}
+
+.item-4 .certifications-item-background {
+    background-image: url('images/blob.png'); /* Ruta de la imagen de fondo difuminada para el primer item */
+}
+
+.item-3 .certifications-item-background {
+    background-image: url('images/cisco.png'); /* Ruta de la imagen de fondo difuminada para el primer item */
+}
+
+.item-2 .certifications-item-background {
+    background-image: url('images/cisco.png'); /* Ruta de la imagen de fondo difuminada para el primer item */
+}
+
+.certifications-item:hover {
+    transform: scale(1.05); /* Agrandar al pasar el ratón */
+}
+
+.certifications-item h3, .certifications-item p {
+    z-index: 1;
+}
+
+
+a.links {
+    text-decoration: none; /* Quitar el subrayado */
+    color: inherit; /* Heredar el color del texto del elemento padre */
+}
+
+ /**/
+
+ .idioms-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.idioms-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.idioms-item {
+    position: relative;
+    background-color: #fff;
+    color: black;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Ancho fijo para todos los elementos */
+    height: 100px; /* Altura fija para todos los elementos */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    font-style: normal;
+}
+
+.idioms-item-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.idioms-item:hover .idioms-item-background {
+    opacity: 0.5;
+}
+
+.item-1 .idioms-item-background {
+    background-image: url('images/span.png'); /* Ruta de la imagen de fondo difuminada para el primer item */
+}
+
+.item-2 .idioms-item-background {
+    background-image: url('images/eng.png'); /* Ruta de la imagen de fondo difuminada para el primer item */
+}
+
+.idioms-item:hover {
+    transform: scale(1.05); /* Agrandar al pasar el ratón */
+}
+
+.idioms-item h3, .idioms-item p {
+    z-index: 1;
 }

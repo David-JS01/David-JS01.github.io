@@ -3,36 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio David-JS01</title>
+    <title>Portfolio de David Jiménez</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="index.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Portfolio de Ciberseguridad</h1>
+    <header  class="header animate__animated animate__fadeIn">
+        <div id="particles-js"></div>
+        <div class="container">
+           
+            <h1>David Jiménez Sánchez | Cybersecurity expert</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
     <main>
-        <section id="inicio">
-            <h2>Bienvenido a mi Portfolio de Ciberseguridad</h2>
-            <!-- Aquí puedes agregar una breve introducción sobre ti y tus habilidades en ciberseguridad -->
+        <section id="inicio" class="inicio-section">
+            <div class="container">
+                <h1>Sobre mí:</h1>
+                <p>Soy un ingeniero informático apasionado por el mundo de la ciberseguridad, tengo conocimientos de desarrollo de software,
+                    pentesting, hacking ético y análisis de riesgos/SGSI.
+                </p>
+                
+                <button class="accordion-btn">Educación</button>
+                <div class="accordion-content">
+                <div class="education">
+                    <h2>Educación:</h2>
+                    <div class="education-content">
+                        <div class="education-item item-1">
+                            <div class="education-item-background"></div>
+                            <h3>Universidad De Salamanca</h3>
+                            <p class="titles">Grado en Ingeniería informática</p>
+                            <p>Fecha de inicio: septiembre 2019 </p>
+                            <p>Fecha de fin: junio 2023</p>
+                        </div>
+                        <div class="education-item item-2">
+                            <div class="education-item-background"></div>
+                            <h3>Universidad Europea de Madrid</h3>
+                            <p class="titles">Máster en seguridad de la información</p>
+                            <p>Fecha de inicio: octubre 2023</p>
+                            <p>Fecha de fin: - </p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                
+                <button class="accordion-btn">Certificaciones y cursos</button>
+                <div class="accordion-content">
+                <div class="certifications">
+                    <h2>Certificaciones y cursos:</h2>
+                    <div class="certifications-content">
+                        <a href="https://codered.eccouncil.org/certificate/72940a58-10c9-41a6-89f9-bba95b95c70c" class="links" target="_blank">
+                        <div class="certifications-item item-4">
+                            <div class="certifications-item-background"></div>
+                            <h3>Ethical Hacking Essentials</h3>
+                            <p class="titles">EC-Council</p>
+                            <p>Fecha de expedición: 2021 </p>
+                        </div>
+                    </a>
+                    <a href="https://www.credly.com/badges/1c8e29fb-c0d6-4b4a-931e-ebdca864d92f" class="links" target="_blank">
+                        <div class="certifications-item item-3">
+                            <div class="certifications-item-background"></div>
+                            <h3>Networking devices and Initial configuration</h3>
+                            <p class="titles">Cisco</p>
+                            <p>Fecha de expedición: 2021 </p>
+                        </div>
+                    </a>
+                    <a href="https://www.credly.com/badges/cf02b6b5-6cdf-4d15-963c-bc3e13a97649" class="links" target="_blank">
+                        <div class="certifications-item item-2">
+                            <div class="certifications-item-background"></div>
+                            <h3>Introduction to Cybersecurity</h3>
+                            <p class="titles">Cisco</p>
+                            <p>Fecha de expedición: 2021 </p>
+                        </div>
+                    </a>
+                        <div class="certifications-item item-1">
+                            <div class="certifications-item-background"></div>
+                            <h3>Redes neuronales artificiales: Modelos actuales y Deep learning</h3>
+                            <p class="titles">Universidad de Salamanca</p>
+                            <p>Fecha de expedición: 2021 </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                
+                <button class="accordion-btn">Experiencia</button>
+                <div class="accordion-content">
+                <div class="experience">
+                    <h2>Experiencia:</h2>
+                    <div class="experience-content">
+                        <div class="experience-item item-1">
+                            <div class="experience-item-background"></div>
+                            <h3>NTT Data</h3>
+                            <p class="titles">Desarrollador de software</p>
+                            <p>Fecha de inicio: marzo 2023 </p>
+                            <p>Fecha de fin: mayo 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <button class="accordion-btn">Idiomas</button>
+                    <div class="accordion-content">
+                    <div class="idioms">
+                        <h2>Idiomas:</h2>
+                        <div class="idioms-content">
+                            <div class="idioms-item item-1">
+                                <div class="idioms-item-background"></div>
+                                <h3>Español</h3>
+                                <p>Nivel: Nativo</p>
+                            </div>
+                            <div class="idioms-item item-2">
+                                <div class="idioms-item-background"></div>
+                                <h3>Ingles</h3>
+                                <p>Nivel: Cambridge B2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
         </section>
-        <section id="proyectos">
-            <h2>Proyectos Destacados</h2>
-            <!-- Aquí puedes listar tus proyectos destacados, incluyendo enlaces a repositorios o demostraciones -->
+        <section id="proyectos" class="proyectos-section">
+            <div class="container">
+                <h2>Proyectos Destacados</h2>
+                <div>
+                    <h3>HermesShield</h3>
+                </div>
+                <div>
+                    <h3>BlamePlus</h3>
+                </div>
+                <div>
+                    <h3>HTTP Web sockets</h3>
+                </div>
+            </div>
         </section>
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <!-- Aquí puedes agregar un formulario de contacto o simplemente tus datos de contacto -->
+        <section id="contacto" class="contacto-section">
+            <div class="container">
+                <h2>Contacto</h2>
+                <!-- Aquí puedes agregar un formulario de contacto o simplemente tus datos de contacto -->
+            </div>
         </section>
     </main>
     <footer>
-        <p>© 2024 David Jiménez Sánchez</p>
+        <div class="container">
+            <p>© 2024 David Jiménez Sánchez</p>
+        </div>
     </footer>
 </body>
 </html>
+
