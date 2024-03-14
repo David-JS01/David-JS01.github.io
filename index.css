@@ -517,6 +517,7 @@ a.links {
 .projects {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .project {
@@ -526,6 +527,18 @@ a.links {
     margin: 10px;
     perspective: 1000px; /* Perspectiva para el efecto de volteo */
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .project {
+        width: calc(50% - 20px); /* Ajuste para dos proyectos por fila en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .project {
+        width: calc(100% - 20px); /* Un proyecto por fila en pantallas muy pequeñas */
+    }
 }
 
 .project-inner {
