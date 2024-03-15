@@ -147,7 +147,39 @@ for (var i = 0; i < acc.length; i++) {
 
 
 /////////
+document.addEventListener('DOMContentLoaded', function() {
+  const typedText = document.getElementById('typed-text');
+  const fixedText = document.getElementById('fixed-text');
+  const phrases = ["Pentesting", "Hacking ético", "Software Developer", "Análisis de riesgos", "Red Team",  "Continuidad de negocio"];
+  let phraseIndex = 0;
+  let index = 0;
+  
+  function typeWriter() {
+      if (index < phrases[phraseIndex].length) {
+          typedText.textContent += phrases[phraseIndex].charAt(index);
+          index++;
+          setTimeout(typeWriter, 50); // Velocidad de escritura (milisegundos)
+      } else {
+          // Si se ha escrito completamente una frase, pasa a la siguiente frase
+          setTimeout(eraseText, 1000); // Espera 1 segundo antes de comenzar a escribir la siguiente frase
+      }
+  }
 
-
-
+  function eraseText() {
+    if (index >= 0) {
+        typedText.textContent = phrases[phraseIndex].substring(0, index);
+        index--;
+        setTimeout(eraseText, 50); // Velocidad de borrado (milisegundos)
+    } else {
+        // Si se ha borrado completamente una frase, pasa a la siguiente frase
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        typedText.textContent = ''; // Limpia el contenido para escribir la siguiente frase
+        index = 0;
+        setTimeout(typeWriter, 500); // Espera 1 segundo antes de comenzar a escribir la siguiente frase
+    }
+}
+  
+  typeWriter();
+  
+});
 
